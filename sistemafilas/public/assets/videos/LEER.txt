@@ -1,0 +1,19 @@
+CARPETA DE VIDEOS PUBLICITARIOS
+================================
+
+Coloque aquí sus archivos de video MP4 con los siguientes nombres:
+
+  higiene_manos.mp4          → Video 1: Higiene de manos
+  servicios_hospital.mp4     → Video 2: Servicios del hospital
+  prevencion_salud.mp4       → Video 3: Prevención y salud
+  informacion_general.mp4    → Video 4: Información general
+
+Formatos soportados: MP4 (H.264), WebM
+Resolución recomendada: 1280×720 o 1920×1080
+Tamaño máximo recomendado: 50 MB por video
+
+Mientras no existan los archivos, la pantalla mostrará
+tarjetas de fondo con diseño animado como marcador de posición.
+
+También puede subir videos desde el panel Admin > Publicidad,
+indicando la URL del archivo (puede ser una URL local o externa).

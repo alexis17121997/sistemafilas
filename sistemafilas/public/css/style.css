@@ -1,0 +1,283 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   Sistema de Filas – Hospital  |  style.css
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Root + body ─────────────────────────────────────────────────────────────*/
+:root {
+  --brand:      #0c2461;
+  --brand-mid:  #1a3a6c;
+  --brand-lite: #2563eb;
+  --radius-md:  8px;
+  --radius-lg:  14px;
+}
+
+/* Background: subtle medical cross pattern (pure CSS, no internet) */
+body.main-body {
+  background-color: #f0f4f8;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect x='36' y='20' width='8' height='40' rx='2' fill='%230c2461' opacity='0.025'/%3E%3Crect x='20' y='36' width='40' height='8' rx='2' fill='%230c2461' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* ── Navbar ──────────────────────────────────────────────────────────────────*/
+.main-nav { background: linear-gradient(90deg, #071423 0%, #0c2461 40%, #1a3a6c 100%) !important; }
+
+.nav-brand-name { font-size: 1rem; font-weight: 800; color: #fff; letter-spacing: 0.5px; line-height: 1.1; }
+.nav-brand-sub  { font-size: 0.62rem; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; text-transform: uppercase; }
+
+.user-avatar-sm {
+  width: 26px; height: 26px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: #fff;
+}
+
+/* ── Auth page ───────────────────────────────────────────────────────────────*/
+.auth-bg {
+  background-color: #071423;
+  background-image:
+    radial-gradient(ellipse at 30% 60%, rgba(37,99,235,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 30%, rgba(124,58,237,0.08) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect x='45' y='22' width='10' height='56' rx='3' fill='white' opacity='0.03'/%3E%3Crect x='22' y='45' width='56' height='10' rx='3' fill='white' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.auth-card { border-radius: 20px !important; box-shadow: 0 30px 70px rgba(0,0,0,0.5) !important; }
+
+.auth-icon {
+  width: 80px; height: 80px; border-radius: 50%; margin: 0 auto;
+  background: linear-gradient(135deg, #1a3a6c, #2563eb);
+  display: flex; align-items: center; justify-content: center;
+}
+.auth-icon i { font-size: 2.5rem; color: #fff; }
+
+/* ── Dashboard stat icons ────────────────────────────────────────────────────*/
+.stat-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Quick link cards ────────────────────────────────────────────────────────*/
+.quick-link-card {
+  transition: transform 0.15s, box-shadow 0.15s;
+  border-radius: var(--radius-lg) !important;
+}
+.quick-link-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important; }
+.quick-icon {
+  width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Window card (admin) ─────────────────────────────────────────────────────*/
+.window-num {
+  width: 60px; height: 60px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; font-weight: 800;
+}
+.window-num-badge {
+  width: 40px; height: 40px; background: var(--brand-lite); color: #fff;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1.1rem;
+}
+.window-status-card { border-radius: 12px !important; transition: all 0.3s; }
+.active-window { background: #eff6ff !important; border: 1px solid #bfdbfe !important; }
+.ticket-display { font-size: 1.1rem; letter-spacing: 2px; }
+
+/* ── Cashier topbar ──────────────────────────────────────────────────────────*/
+.cashier-topbar {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.cashier-window-badge { gap: 12px; }
+
+.cw-num {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-lite));
+  color: #fff; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; font-weight: 900; flex-shrink: 0;
+}
+.cw-name { font-weight: 700; font-size: 1rem; color: var(--brand); }
+.cw-user { font-size: 0.78rem; color: #64748b; }
+
+.stat-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px; border-radius: 99px;
+  font-size: 0.82rem; font-weight: 600;
+}
+.stat-pill i   { font-size: 1rem; }
+.stat-pill span { font-size: 1.1rem; }
+.stat-pill small { opacity: 0.7; font-weight: 400; }
+.stat-served  { background: #f0fdf4; color: #15803d; }
+.stat-waiting { background: #fffbeb; color: #b45309; }
+
+/* ── Cashier action panel ────────────────────────────────────────────────────*/
+.cashier-panel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+/* Idle panel */
+.idle-icon {
+  width: 72px; height: 72px;
+  background: #eff6ff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto;
+}
+.idle-icon i { font-size: 2rem; color: var(--brand-lite); }
+
+.btn-call-next {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  width: 100%; padding: 20px 16px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-lite) 100%);
+  border: none; border-radius: 12px; cursor: pointer;
+  color: #fff; text-align: center;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+}
+.btn-call-next:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,99,235,0.4); }
+.btn-call-next:active:not(:disabled) { transform: scale(0.98); }
+.btn-call-next:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-call-icon { font-size: 2.2rem; line-height: 1; }
+.btn-call-icon i { font-size: inherit; }
+.btn-call-label { font-size: 1.2rem; font-weight: 800; letter-spacing: 1px; }
+.btn-call-sub   { font-size: 0.8rem; opacity: 0.8; }
+
+/* Ticket reveal */
+.ticket-reveal-header {
+  text-align: center;
+  padding: 24px 16px 16px;
+  background: linear-gradient(180deg, #f8faff 0%, #fff 100%);
+  border-bottom: 1px solid #f0f4f8;
+}
+.tr-label  { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: #94a3b8; margin-bottom: 6px; }
+.tr-number {
+  font-size: 3.2rem; font-weight: 900; letter-spacing: 5px; line-height: 1;
+  color: var(--brand-lite);
+  transform: scale(0.8); opacity: 0;
+  transition: all 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+.tr-number.visible { transform: scale(1); opacity: 1; }
+.tr-meta  { font-size: 0.82rem; color: #64748b; margin-top: 6px; display: flex; gap: 6px; align-items: center; justify-content: center; }
+.tr-sep   { color: #cbd5e1; }
+.tr-status { margin-top: 8px; }
+
+/* Action buttons grid */
+.ticket-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 16px;
+}
+.btn-action {
+  padding: 12px 8px; border: none; border-radius: 10px;
+  font-size: 0.82rem; font-weight: 600; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  transition: all 0.15s;
+}
+.btn-action i { font-size: 1.4rem; }
+.btn-action:active { transform: scale(0.97); }
+.btn-action:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-serving  { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.btn-serving:hover:not(:disabled)  { background: #dcfce7; }
+.btn-complete { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.btn-complete:hover:not(:disabled) { background: #dbeafe; }
+.btn-recall   { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+.btn-recall:hover:not(:disabled)   { background: #fef3c7; }
+.btn-noshow   { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+.btn-noshow:hover:not(:disabled)   { background: #fee2e2; }
+
+/* ── Queue list ──────────────────────────────────────────────────────────────*/
+.queue-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f8fafc;
+  transition: background 0.15s;
+}
+.queue-row:hover { background: #f8fafc; }
+.queue-row-first { background: #fffbeb; }
+
+.qr-pos {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: #f1f5f9; color: #64748b;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700; flex-shrink: 0;
+}
+.qr-dot   { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.qr-info  { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.qr-ticket { font-size: 0.95rem; font-weight: 800; letter-spacing: 1px; white-space: nowrap; }
+.qr-cat    { font-size: 0.75rem; white-space: nowrap; }
+.qr-badge  { font-size: 0.68rem; font-weight: 600; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+.qr-time   { font-size: 0.7rem; white-space: nowrap; }
+
+/* ── Call overlay ────────────────────────────────────────────────────────────*/
+.call-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(12, 36, 97, 0.93);
+  display: flex; align-items: center; justify-content: center;
+  animation: ovIn 0.3s ease;
+}
+@keyframes ovIn { from { opacity: 0; } to { opacity: 1; } }
+.call-overlay-inner { text-align: center; }
+.co-label  { font-size: 0.8rem; letter-spacing: 4px; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-bottom: 8px; }
+.co-ticket {
+  font-size: clamp(4rem, 14vw, 8rem); font-weight: 900; color: #fbbf24;
+  letter-spacing: 6px; line-height: 1;
+  animation: tickPulse 0.6s infinite alternate;
+}
+@keyframes tickPulse { from { transform: scale(1); } to { transform: scale(1.04); } }
+.co-window { font-size: 1.8rem; color: #fff; font-weight: 600; margin-top: 12px; }
+
+/* ── Ticket preview (printer config) ────────────────────────────────────────*/
+.ticket-preview {
+  background: #fff; border: 1px dashed #aaa; padding: 8px;
+  font-family: monospace; box-shadow: 2px 2px 8px rgba(0,0,0,0.12); max-width: 100%;
+}
+.ticket-header   { font-weight: bold; text-align: center; white-space: pre-wrap; margin-bottom: 6px; }
+.ticket-separator{ color: #888; font-size: 0.8em; margin: 4px 0; text-align: center; }
+.ticket-number   { font-size: 2.5em; font-weight: 900; text-align: center; letter-spacing: 4px; margin: 8px 0; }
+.ticket-category { text-align: center; font-weight: bold; margin: 2px 0; }
+.ticket-service, .ticket-date, .ticket-wait { text-align: center; font-size: 0.85em; color: #555; margin: 2px 0; }
+.ticket-footer   { text-align: center; font-size: 0.8em; white-space: pre-wrap; margin-top: 6px; color: #444; }
+
+/* ── Specialty icon ──────────────────────────────────────────────────────────*/
+.specialty-icon {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* ── Bootstrap color subtle overrides (for older BS) ───────────────────────*/
+.bg-primary-subtle   { background-color: #eff6ff !important; }
+.bg-success-subtle   { background-color: #f0fdf4 !important; }
+.bg-warning-subtle   { background-color: #fffbeb !important; }
+.bg-danger-subtle    { background-color: #fef2f2 !important; }
+.bg-info-subtle      { background-color: #ecfeff !important; }
+.bg-secondary-subtle { background-color: #f8fafc !important; }
+.bg-dark-subtle      { background-color: #f1f5f9 !important; }
+.text-primary { color: var(--brand-lite) !important; }
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────────*/
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ── Card animation ──────────────────────────────────────────────────────────*/
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.card { animation: fadeInUp 0.25s ease; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────────*/
+@media (max-width: 576px) {
+  .cw-num { width: 42px; height: 42px; font-size: 1.3rem; }
+  .tr-number { font-size: 2.4rem; }
+  .btn-call-label { font-size: 1rem; }
+}
